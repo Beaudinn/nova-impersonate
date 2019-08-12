@@ -45,7 +45,7 @@ class ImpersonateController extends Controller
             $this->recordAction($request->user()->getKey(), $user_to_impersonate, 'Impersonate');
         }
 
-        $this->manager->take($request->user(), $user_to_impersonate);
+        $this->manager->take($request->user(), $user_to_impersonate, config('nova-impersonate.impersonator_guard_name', null));
 
         $redirectBack = config('nova-impersonate.redirect_back');
 

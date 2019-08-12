@@ -13,6 +13,12 @@ return [
      * Redirect path
      */
     'redirect_to'       => '/',
+
+    /*
+    * Allows impersonation through multiple guards
+    */
+    'impersonator_guard_name' => 'web',
+
     /*
      * Set true to record impersonation actions in Nova's action_events table
      * Attach the `Laravel\Nova\Actions\Actionable` trait to the `User` Eloquent model
